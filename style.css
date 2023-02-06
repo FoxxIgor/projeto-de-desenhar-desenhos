@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    text-align: center;
+    background-image: url("space.jpg");
+    color: white;
+    font-family: 'Itim', cursive;
+    font-size: 30px;
+    overflow: hidden;
+}
+#pontos{
+    margin: 20px;
+    padding: 5px;
+}
+#tempo{
+    margin: 20px;
+    padding: 5px;
+}
+h1{
+    font-size: 50px;
+}
+@keyframes planetAnimation{
+    /* 0%{
+        left:0;
+    }
+    25%{
+        left: 300px;
+    }
+    50%{
+        left:350px;
+    }
+    75%{
+        left: 400px;
+    }
+    100%{
+        left:0px;
+    } */
+    from{
+        left: -300px;
+    }
+    to{
+        left: 100%;
+    }
+}
+#divAnimation{
+    position: absolute;
+    float:right;
+    bottom: 100px;
+    width: 200px;
+    height: 200px;
+    background-size: 200px;
+    background-image: url("sprite_planet_3.png");
+    animation-name: planetAnimation;
+    animation-duration: 20s;
+    animation-iteration-count: infinite; /* deixa fazendo a animação para sempre*/
+    transition: all 10s linear;
+}
+.button{
+    border: 5px solid rgb(54, 54, 97);
+    background-color: rgb(36, 36, 68);
+    border-radius: 20px;
+}
+#pontos{
+    right: 300px;
+    position: absolute;
+}
+#tempo{
+    left: 300px;
+    position: absolute;
+}
+canvas{
+    border: 5px inset rgb(98, 98, 134);
+    border-radius: 20px;
+}
